@@ -39,21 +39,21 @@ function love.update(dt)
     local moveX, moveY = 0, 0
 
     -- التحكم في الحركة
-    if love.keyboard.isDown("d") then
+    if love.keyboard.isDown("d") or love.keyboard.isDown("right") then
         moveX = 1
         player.anim = player.animations.right
         isMoving = true
-    elseif love.keyboard.isDown("a") then
+    elseif love.keyboard.isDown("a") or love.keyboard.isDown("left") then
         moveX = -1
         player.anim = player.animations.left
         isMoving = true
     end
 
-    if love.keyboard.isDown("s") then
+    if love.keyboard.isDown("s") or love.keyboard.isDown("down") then
         moveY = 1
         player.anim = player.animations.down
         isMoving = true
-    elseif love.keyboard.isDown("w") then
+    elseif love.keyboard.isDown("w") or love.keyboard.isDown("up") then
         moveY = -1
         player.anim = player.animations.up
         isMoving = true
